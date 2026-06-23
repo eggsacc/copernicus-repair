@@ -3,8 +3,10 @@
 EV Drive F710 controller teleop  (differential drive, SPEED mode)
 =================================================================
 
-Tele-operate the two-drive robot with a Logitech F710 gamepad (XInput mode),
-with a tkinter UI to pick the control style and configure limits live.
+Tele-operate the two-drive robot with a Logitech F710 gamepad (set the rear
+switch to 'X' = XInput), with a tkinter UI to pick the control style and
+configure limits live. Gamepad input uses pygame (cross-platform; on Linux the
+F710 is handled by the in-kernel xpad driver).
 
 Two control types (toggle in the UI, or with the controller's A button):
 
@@ -44,11 +46,12 @@ reads must not freeze the UI). The UI thread polls the gamepad (fast, local) and
 publishes a signed per-wheel command + config under a lock; the worker consumes
 them, writes on change, and monitors alarms / bus voltage -> stop.
 
-    python ev_controller_teleop.py --port COM3
-    python ev_controller_teleop.py --dry-run        # UI + gamepad, no serial
+    python3 ev_controller_teleop.py --port /dev/ttyUSB0
+    python3 ev_controller_teleop.py --dry-run        # UI + gamepad, no serial
 """
 
 import argparse
+import os
 import threading
 import time
 import tkinter as tk
@@ -58,13 +61,83 @@ from ev_modbus_test import (
     ModbusError, ModbusTimeout, ALARM_CODES,
 )
 
+# SDL's dummy video driver: we drive our own tkinter window, so pygame only
+# needs the joystick subsystem (this keeps it from opening an SDL window and
+# lets the pad work even without an SDL-reachable display). Both env vars are
+# set before importing pygame; setdefault lets the environment override them.
+os.environ.setdefault("SDL_VIDEODRIVER", "dummy")
+os.environ.setdefault("PYGAME_HIDE_SUPPORT_PROMPT", "1")
 try:
-    import XInput
+    import pygame
 except ImportError:
     raise SystemExit(
-        "This script needs the 'XInput-Python' package for the gamepad.\n"
-        "Install it with:\n    pip install XInput-Python"
+        "This script needs the 'pygame' package for the gamepad.\n"
+        "On Raspberry Pi / Debian:  sudo apt install -y python3-pygame\n"
+        "Or with pip:               pip install pygame"
     )
+
+# ===========================================================================
+# Gamepad backend (pygame) — replaces the Windows-only XInput library
+# ===========================================================================
+# Set the F710's rear switch to 'X' (XInput). On Linux the in-kernel xpad
+# driver then presents it as an Xbox 360 pad with the axis/button layout below;
+# pygame is cross-platform, so this same backend also works on Windows. If a
+# stick or the D-pad reads wrong on your unit, adjust the indices here.
+AXIS_LX, AXIS_LY = 0, 1      # left stick   (axes 2 / 5 are the triggers)
+AXIS_RX, AXIS_RY = 3, 4      # right stick
+BTN_A, BTN_B, BTN_X, BTN_Y = 0, 1, 2, 3
+BTN_BACK, BTN_START = 6, 7
+HAT_DPAD = 0                 # D-pad is reported as hat 0: (x, y) in {-1, 0, 1}
+
+
+class Gamepad:
+    """Minimal pygame wrapper exposing just what the teleop UI needs: a
+    per-player 'connected' check and a state read of (thumb sticks, buttons).
+    Sticks are normalised to [-1, 1] with UP/RIGHT positive (matching the old
+    XInput convention, so the rest of the UI is unchanged)."""
+
+    def __init__(self, player):
+        self.player = player
+        self.joy = None
+        pygame.init()
+        pygame.joystick.init()
+
+    def connected(self):
+        """Pump+drain SDL events once per cycle (this also refreshes hot-plug
+        state and the latest stick/button values that read() returns)."""
+        try:
+            pygame.event.get()
+            if self.player >= pygame.joystick.get_count():
+                self.joy = None
+                return False
+            if self.joy is None:
+                self.joy = pygame.joystick.Joystick(self.player)
+                self.joy.init()
+            return True
+        except pygame.error:
+            self.joy = None
+            return False
+
+    def read(self):
+        """Return ((lx, ly), (rx, ry)), button_dict. Call only when connected."""
+        j = self.joy
+        nb = j.get_numbuttons()
+
+        def pressed(i):
+            return bool(j.get_button(i)) if i < nb else False
+
+        hx, hy = j.get_hat(HAT_DPAD) if j.get_numhats() > HAT_DPAD else (0, 0)
+        thumbs = ((j.get_axis(AXIS_LX), -j.get_axis(AXIS_LY)),   # SDL up = -1;
+                  (j.get_axis(AXIS_RX), -j.get_axis(AXIS_RY)))   # flip to up=+1
+        buttons = {
+            "A": pressed(BTN_A), "B": pressed(BTN_B),
+            "X": pressed(BTN_X), "Y": pressed(BTN_Y),
+            "START": pressed(BTN_START), "BACK": pressed(BTN_BACK),
+            "DPAD_UP": hy > 0, "DPAD_DOWN": hy < 0,
+            "DPAD_LEFT": hx < 0, "DPAD_RIGHT": hx > 0,
+        }
+        return thumbs, buttons
+
 
 # --- drive registers / values (from EV_DRIVE_CONTROL_GUIDE.md) --------------
 REG_SPEED0 = 0x3F08   # Speed No.0 setpoint (r/min), RAM
@@ -323,9 +396,9 @@ class App:
         self.in_ly = self.in_rx = 0.0
         self.in_btn = {}
 
-        XInput.set_deadzone(XInput.DEADZONE_LEFT_THUMB, 0)   # we apply our own
-        XInput.set_deadzone(XInput.DEADZONE_RIGHT_THUMB, 0)
-        XInput.set_deadzone(XInput.DEADZONE_TRIGGER, 0)
+        # Linux/pygame gamepad backend. We apply our own deadzone in software
+        # (see apply_deadzone), so there is nothing to disable on the device.
+        self.gp = Gamepad(self.player)
 
         self._build_ui()
 
@@ -488,17 +561,11 @@ class App:
     def poll(self):
         if not self.robot.running:
             return
-        try:
-            connected = XInput.get_connected()[self.player]
-        except Exception:
-            connected = False
-
-        if connected:
+        if self.gp.connected():
             self.robot.set_connected(True)
             try:
-                state = XInput.get_state(self.player)
-                self._handle_input(state)
-            except XInput.XInputNotConnectedError:
+                self._handle_input(*self.gp.read())
+            except pygame.error:             # joystick yanked mid-read
                 self.robot.set_connected(False)
         else:
             self.robot.set_connected(False)
@@ -509,9 +576,8 @@ class App:
         self._refresh()
         self.root.after(self.args.ui_ms, self.poll)
 
-    def _handle_input(self, state):
-        btn = XInput.get_button_values(state)
-        (lx, ly), (rx, ry) = XInput.get_thumb_values(state)
+    def _handle_input(self, thumbs, btn):
+        (lx, ly), (rx, ry) = thumbs
         self.in_ly, self.in_rx, self.in_btn = ly, rx, btn
 
         # ---- edge-triggered utility buttons ----
@@ -620,9 +686,11 @@ class App:
 
 def main():
     p = argparse.ArgumentParser(description="F710 gamepad teleop for the EV robot.")
-    p.add_argument("--port", default="COM3", help="serial port (default COM3)")
+    p.add_argument("--port", default="/dev/ttyUSB0",
+                   help="serial port (default /dev/ttyUSB0; e.g. COM3 on Windows)")
     p.add_argument("--baud", type=int, default=115200)
-    p.add_argument("--player", type=int, default=0, help="XInput slot 0-3")
+    p.add_argument("--player", type=int, default=0,
+                   help="gamepad index (0 = first detected controller)")
     p.add_argument("--left-id", type=int, default=1)
     p.add_argument("--right-id", type=int, default=2)
     p.add_argument("--max", type=int, default=300, help="default max r/min")
