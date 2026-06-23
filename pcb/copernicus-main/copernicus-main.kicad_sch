@@ -6244,6 +6244,16 @@
 	)
 	(wire
 		(pts
+			(xy 143.51 149.86) (xy 143.51 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2bbb6eb-164a-49ec-80f1-51c5bf5b5b98")
+	)
+	(wire
+		(pts
 			(xy 151.13 41.91) (xy 151.13 43.18)
 		)
 		(stroke
@@ -8581,10 +8591,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "609adfe4-0bbd-405e-b653-24716a9870cf")
 		(property "Reference" "U4"
-			(at 145.6533 116.84 0)
+			(at 148.082 120.396 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8595,7 +8604,7 @@
 			)
 		)
 		(property "Value" "THVD1450D"
-			(at 145.6533 119.38 0)
+			(at 145.034 149.098 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8841,6 +8850,85 @@
 			(project "copernicus-main"
 				(path "/a9180fc8-dc83-4e73-a866-5c9cdd0f4d7b"
 					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 143.51 151.13 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "74b447f7-c383-48c4-b8ab-0f258ada2799")
+		(property "Reference" "#PWR019"
+			(at 143.51 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 143.51 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 143.51 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 143.51 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 143.51 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d7cd1086-06d4-473d-925b-62115aa3ae67")
+		)
+		(instances
+			(project "copernicus-main"
+				(path "/a9180fc8-dc83-4e73-a866-5c9cdd0f4d7b"
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
