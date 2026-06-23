@@ -262,8 +262,9 @@ class Robot:
                 bytesize=serial.EIGHTBITS, parity=serial.PARITY_NONE,
                 stopbits=serial.STOPBITS_ONE, timeout=self.args.timeout)
         except serial.SerialException as e:
+            # Leave self.running True so the UI poll loop keeps cycling and can
+            # display this status; only the worker (no port to drive) exits.
             self.set_status(f"serial open FAILED: {e}")
-            self.running = False
             return
 
         # one-time shaping (RAM): gentle accel/decel, capped torque
