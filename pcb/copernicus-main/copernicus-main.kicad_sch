@@ -1577,6 +1577,236 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Diode:SM712_SOT23"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 4.445 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SM712_SOT23"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 0 -8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diode_arrays/littelfuse_tvs_diode_array_sm712_datasheet.pdf.pdf"
+				(at -3.81 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "7V/12V, 600W Asymmetrical TVS Diode Array, SOT-23"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "transient voltage suppressor thyrector transil"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SM712_SOT23_0_0"
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SM712_SOT23_0_1"
+				(polyline
+					(pts
+						(xy -6.35 0) (xy 6.35 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -6.35 -1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -6.35 1.27) (xy -6.35 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.302 1.27) (xy -3.81 1.27) (xy -3.81 -1.27) (xy -4.318 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy 6.35 -1.27) (xy 6.35 1.27) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.318 1.27) (xy 3.81 1.27) (xy 3.81 -1.27) (xy 3.302 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SM712_SOT23_1_1"
+				(pin passive line
+					(at -8.89 0 0)
+					(length 2.54)
+					(name "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 8.89 0 180)
+					(length 2.54)
+					(name "A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -3.81 90)
+					(length 2.54)
+					(name "common"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Interface_CAN_LIN:SN65HVD230"
 			(pin_names
 				(offset 1.016)
@@ -2074,459 +2304,6 @@
 				)
 			)
 			(symbol "THVD1400D_1_1"
-				(circle
-					(center -0.762 2.54)
-					(radius 0.508)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.032 4.826) (xy 2.032 8.636) (xy -3.048 5.08) (xy 2.032 1.016) (xy 2.032 4.826)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.54 2.54)
-					(radius 0.508)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 5.08 7.62)
-					(radius 0.2794)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(pin output line
-					(at -10.16 5.08 0)
-					(length 2.54)
-					(name "RO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 2.54 0)
-					(length 2.54)
-					(name "~{RE}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 0 0)
-					(length 2.54)
-					(name "DE"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 -5.08 0)
-					(length 2.54)
-					(name "DI"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -15.24 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 10.16 7.62 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 10.16 2.54 180)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 15.24 270)
-					(length 2.54)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Interface_UART:THVD1450D"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at -6.985 13.97 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "THVD1450D"
-				(at 1.905 13.97 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-				(at 0 -30.48 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/thvd1450.pdf"
-				(at 0 -33.02 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "3.3-V to 5-V RS-485 transceiver with ±18-kV IEC ESD protection, SOIC-8"
-				(at 0 -27.94 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer" "Texas Instruments"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "tranceiver rs485 esd"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "*SOIC*3.9x4.9mm*P1.27mm*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "THVD1450D_0_1"
-				(rectangle
-					(start -7.62 12.7)
-					(end 7.62 -12.7)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy -4.191 2.54) (xy -1.27 2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -4.191 0) (xy -0.889 0) (xy -0.889 -2.286)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.175 5.08) (xy -4.191 5.08) (xy -4.064 5.08)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 -5.08) (xy -4.191 -5.08)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.413 -5.08) (xy -2.413 -1.27) (xy 2.667 -4.826) (xy -2.413 -8.89) (xy -2.413 -5.08)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -7.62) (xy 5.08 -7.62)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0.381 -2.54)
-					(radius 0.508)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.889 -2.54) (xy 3.81 -2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.032 7.62) (xy 5.715 7.62)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.048 2.54) (xy 5.715 2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 3.81 2.54)
-					(radius 0.2794)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.81 -2.54) (xy 3.81 2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 -7.62) (xy 5.08 7.62)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "THVD1450D_1_1"
 				(circle
 					(center -0.762 2.54)
 					(radius 0.508)
@@ -5627,6 +5404,12 @@
 		)
 	)
 	(junction
+		(at 149.86 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "013465d3-44fd-47f2-9cae-bf8bf5846704")
+	)
+	(junction
 		(at 151.13 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5657,6 +5440,12 @@
 		(uuid "36f76a08-02dc-493b-bd85-4da193ca4800")
 	)
 	(junction
+		(at 128.27 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3d4ec775-7986-4890-b88a-36715a4b9910")
+	)
+	(junction
 		(at 269.24 148.59)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5675,6 +5464,12 @@
 		(uuid "47ce5152-b0bc-4951-a7b2-55dbec54a242")
 	)
 	(junction
+		(at 149.86 139.7)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4870feb1-c5b9-49e4-9425-335387923d64")
+	)
+	(junction
 		(at 160.02 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5685,6 +5480,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "50b2543f-b892-4cc1-9d87-ba66fcee4c6c")
+	)
+	(junction
+		(at 116.84 135.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "50c61069-a79f-49e2-8cdc-333c384388f7")
 	)
 	(junction
 		(at 252.73 95.25)
@@ -5705,6 +5506,12 @@
 		(uuid "75f0bd52-8a4d-42f1-a06c-28a538b8b051")
 	)
 	(junction
+		(at 109.22 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7db7f426-c281-4f14-a6b5-655609c3ce07")
+	)
+	(junction
 		(at 168.91 35.56)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5721,6 +5528,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9c10ecb4-2577-4ad8-a60b-b0adccd8fb3f")
+	)
+	(junction
+		(at 128.27 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9ddd3bfa-14c6-4697-85db-3b84ce328658")
 	)
 	(junction
 		(at 201.93 35.56)
@@ -5745,6 +5558,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a7b08e7f-fa02-4f2b-b148-aa1a566901f5")
+	)
+	(junction
+		(at 114.3 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b033c916-13df-4bfd-af03-2f30bb226e45")
 	)
 	(junction
 		(at 234.95 158.75)
@@ -5906,6 +5725,16 @@
 	)
 	(wire
 		(pts
+			(xy 140.97 139.7) (xy 149.86 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d6c2d0b-ec9b-436a-a3f2-0096c3ae88ac")
+	)
+	(wire
+		(pts
 			(xy 246.38 140.97) (xy 250.19 140.97)
 		)
 		(stroke
@@ -5913,6 +5742,16 @@
 			(type default)
 		)
 		(uuid "0fd8c6ac-9ad6-4557-bfab-f731ea05098f")
+	)
+	(wire
+		(pts
+			(xy 146.05 130.81) (xy 144.78 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ff6035d-5da5-4efb-b69c-f185da7790f4")
 	)
 	(wire
 		(pts
@@ -5993,6 +5832,16 @@
 			(type default)
 		)
 		(uuid "1d36b2e9-e859-46ef-b042-561b9a9e3a6f")
+	)
+	(wire
+		(pts
+			(xy 118.11 133.35) (xy 116.84 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e32d5e1-b892-4cf4-948e-781ba93d2641")
 	)
 	(wire
 		(pts
@@ -6266,6 +6115,16 @@
 	)
 	(wire
 		(pts
+			(xy 114.3 140.97) (xy 118.11 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4dbadcb4-3b88-455a-9bda-f31a06920efa")
+	)
+	(wire
+		(pts
 			(xy 201.93 35.56) (xy 210.82 35.56)
 		)
 		(stroke
@@ -6273,6 +6132,26 @@
 			(type default)
 		)
 		(uuid "4fb8f11a-6fe5-4943-aa46-478a14a941d2")
+	)
+	(wire
+		(pts
+			(xy 114.3 119.38) (xy 114.3 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5108f09d-0abe-4fbe-b4b4-73f837a3867d")
+	)
+	(wire
+		(pts
+			(xy 114.3 125.73) (xy 114.3 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5499961c-632a-4016-854b-5f171334b97f")
 	)
 	(wire
 		(pts
@@ -6336,6 +6215,16 @@
 	)
 	(wire
 		(pts
+			(xy 140.97 128.27) (xy 140.97 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62c0285d-c3af-4d3c-a673-fc8330aaf8c5")
+	)
+	(wire
+		(pts
 			(xy 261.62 146.05) (xy 262.89 146.05)
 		)
 		(stroke
@@ -6343,6 +6232,16 @@
 			(type default)
 		)
 		(uuid "6384cf7c-5cb4-4c02-81cc-19ee3a961525")
+	)
+	(wire
+		(pts
+			(xy 109.22 119.38) (xy 114.3 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63e9978e-b97d-4c4a-bcea-4cdd6c281aea")
 	)
 	(wire
 		(pts
@@ -6376,6 +6275,16 @@
 	)
 	(wire
 		(pts
+			(xy 149.86 121.92) (xy 153.67 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "681fadb0-923a-416c-81c7-9f3526150ada")
+	)
+	(wire
+		(pts
 			(xy 138.43 60.96) (xy 135.89 60.96)
 		)
 		(stroke
@@ -6383,6 +6292,26 @@
 			(type default)
 		)
 		(uuid "6b4bddbc-3c93-4db5-b554-8b1b91ca27a7")
+	)
+	(wire
+		(pts
+			(xy 144.78 130.81) (xy 144.78 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6bfdd86d-08e1-4cbc-88a4-590aff799cfb")
+	)
+	(wire
+		(pts
+			(xy 109.22 130.81) (xy 118.11 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6cb9380d-8c54-4464-ab29-30ecab5166bc")
 	)
 	(wire
 		(pts
@@ -6416,6 +6345,26 @@
 	)
 	(wire
 		(pts
+			(xy 109.22 125.73) (xy 109.22 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "729ef11a-3664-4b76-a852-024cac8c1f0a")
+	)
+	(wire
+		(pts
+			(xy 128.27 151.13) (xy 128.27 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78044026-3d0b-4927-94e3-0c0de1c0d6a9")
+	)
+	(wire
+		(pts
 			(xy 168.91 35.56) (xy 177.8 35.56)
 		)
 		(stroke
@@ -6433,6 +6382,16 @@
 			(type default)
 		)
 		(uuid "7c12f104-6ab0-47da-b9e5-cf6867027156")
+	)
+	(wire
+		(pts
+			(xy 114.3 119.38) (xy 128.27 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e0fabb8-dd8b-448b-a185-f297f140c197")
 	)
 	(wire
 		(pts
@@ -6526,6 +6485,16 @@
 	)
 	(wire
 		(pts
+			(xy 106.68 130.81) (xy 109.22 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9dc34c91-6b48-4cd5-81c1-110d97ecb8fd")
+	)
+	(wire
+		(pts
 			(xy 224.79 34.29) (xy 224.79 35.56)
 		)
 		(stroke
@@ -6533,6 +6502,16 @@
 			(type default)
 		)
 		(uuid "9e712383-ff03-46c3-8d4e-c4d15b99206e")
+	)
+	(wire
+		(pts
+			(xy 116.84 135.89) (xy 116.84 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a18dc497-b521-475e-bcac-b930086ed3f9")
 	)
 	(wire
 		(pts
@@ -6576,6 +6555,36 @@
 	)
 	(wire
 		(pts
+			(xy 140.97 133.35) (xy 140.97 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7206cbd-c7f7-4f1e-9304-84f53724eb37")
+	)
+	(wire
+		(pts
+			(xy 116.84 152.4) (xy 128.27 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae16689a-63bf-4ba4-b536-cd32ea792d61")
+	)
+	(wire
+		(pts
+			(xy 149.86 139.7) (xy 154.94 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af494c19-5f85-49e2-947a-9602d542aeb7")
+	)
+	(wire
+		(pts
 			(xy 191.77 44.45) (xy 191.77 45.72)
 		)
 		(stroke
@@ -6596,6 +6605,16 @@
 	)
 	(wire
 		(pts
+			(xy 116.84 149.86) (xy 116.84 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b168b05e-21fc-40f2-921e-7913a8d3eddd")
+	)
+	(wire
+		(pts
 			(xy 246.38 156.21) (xy 250.19 156.21)
 		)
 		(stroke
@@ -6603,6 +6622,16 @@
 			(type default)
 		)
 		(uuid "b3386cb0-75c4-4881-ba61-5cf8b1dc4c61")
+	)
+	(wire
+		(pts
+			(xy 116.84 133.35) (xy 116.84 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b71dee61-ac63-4cff-9129-b691377c4014")
 	)
 	(wire
 		(pts
@@ -6686,16 +6715,6 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 149.86) (xy 143.51 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c2bbb6eb-164a-49ec-80f1-51c5bf5b5b98")
-	)
-	(wire
-		(pts
 			(xy 151.13 41.91) (xy 151.13 43.18)
 		)
 		(stroke
@@ -6723,6 +6742,16 @@
 			(type default)
 		)
 		(uuid "cb848978-da90-4c11-8f27-17d79e35187b")
+	)
+	(wire
+		(pts
+			(xy 128.27 118.11) (xy 128.27 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd9c6d90-12ae-4bf5-888b-40a9d2983214")
 	)
 	(wire
 		(pts
@@ -6786,6 +6815,16 @@
 	)
 	(wire
 		(pts
+			(xy 109.22 120.65) (xy 109.22 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9f105c9-9d26-40d8-90b7-df9d00ab2509")
+	)
+	(wire
+		(pts
 			(xy 250.19 140.97) (xy 261.62 140.97)
 		)
 		(stroke
@@ -6793,6 +6832,26 @@
 			(type default)
 		)
 		(uuid "dbf1e275-d93a-4bcc-8a04-7aa0c21da69c")
+	)
+	(wire
+		(pts
+			(xy 138.43 133.35) (xy 140.97 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dde96c26-9a86-4c5d-a385-2b644201c32c")
+	)
+	(wire
+		(pts
+			(xy 138.43 128.27) (xy 140.97 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de268247-9ac5-4d6e-ba3b-59b101fa82c7")
 	)
 	(wire
 		(pts
@@ -6836,6 +6895,16 @@
 	)
 	(wire
 		(pts
+			(xy 116.84 135.89) (xy 118.11 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb811f03-ffff-42a4-a72f-31d394048222")
+	)
+	(wire
+		(pts
 			(xy 151.13 36.83) (xy 151.13 35.56)
 		)
 		(stroke
@@ -6853,6 +6922,26 @@
 			(type default)
 		)
 		(uuid "f33edb89-d76f-435a-8456-8fd4ece5a445")
+	)
+	(wire
+		(pts
+			(xy 128.27 119.38) (xy 128.27 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f48be5f8-0286-4dcd-830d-0f3fd5e88956")
+	)
+	(wire
+		(pts
+			(xy 140.97 121.92) (xy 149.86 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5a06a05-6f33-4af7-bbfd-c56c979387db")
 	)
 	(wire
 		(pts
@@ -6883,6 +6972,26 @@
 			(type default)
 		)
 		(uuid "f6ebf5ec-7ef1-47fa-b8f0-58d40cb16e4d")
+	)
+	(wire
+		(pts
+			(xy 128.27 153.67) (xy 128.27 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7ea7894-fa08-4c33-872f-8c50b2658223")
+	)
+	(wire
+		(pts
+			(xy 114.3 135.89) (xy 116.84 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8097a8d-c020-4e38-8471-eb7269a669ec")
 	)
 	(wire
 		(pts
@@ -7128,6 +7237,30 @@
 			)
 		)
 	)
+	(global_label "RS485+"
+		(shape input)
+		(at 153.67 121.92 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6d75b800-2e38-4b94-892f-f997c7953779")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 164.3356 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "CAN_RX"
 		(shape input)
 		(at 173.99 101.6 180)
@@ -7224,6 +7357,30 @@
 			)
 		)
 	)
+	(global_label "USART2_DE"
+		(shape input)
+		(at 114.3 135.89 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a2e204b7-23c1-41f5-983e-fc588880d2af")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 100.8525 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "USART2_RX"
 		(shape input)
 		(at 209.55 60.96 0)
@@ -7272,6 +7429,54 @@
 			)
 		)
 	)
+	(global_label "USART2_RX"
+		(shape input)
+		(at 106.68 130.81 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "bfdac0de-08b7-4c67-830f-e33e637e97af")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 93.172 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "USART2_TX"
+		(shape input)
+		(at 114.3 140.97 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c19288b6-43a7-4afd-b277-bf69633a04f4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 101.0944 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "CANH"
 		(shape input)
 		(at 261.62 140.97 0)
@@ -7285,6 +7490,30 @@
 		(uuid "f2a25582-219b-460b-a95b-1fe8d0dfb6d6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 269.6248 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "RS485-"
+		(shape input)
+		(at 154.94 139.7 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f2a8c962-51c5-44fb-a06d-fd4ba985360e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 165.6056 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7818,6 +8047,91 @@
 		)
 	)
 	(symbol
+		(lib_id "Diode:SM712_SOT23")
+		(at 149.86 130.81 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1c770b40-19de-47de-8b1c-c9b35136f291")
+		(property "Reference" "D1"
+			(at 152.4 129.5399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SM712"
+			(at 152.4 132.0799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 140.97 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diode_arrays/littelfuse_tvs_diode_array_sm712_datasheet.pdf.pdf"
+			(at 149.86 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "7V/12V, 600W Asymmetrical TVS Diode Array, SOT-23"
+			(at 149.86 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "56291c39-4362-431e-bfed-4de95deaa684")
+		)
+		(pin "3"
+			(uuid "14266ed3-0592-4164-b066-fe48a5d13ffe")
+		)
+		(pin "2"
+			(uuid "400b9dda-3f59-4c9c-9068-64a950f7412d")
+		)
+		(instances
+			(project "copernicus-main"
+				(path "/a9180fc8-dc83-4e73-a866-5c9cdd0f4d7b"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 255.27 87.63 90)
 		(unit 1)
@@ -7891,6 +8205,85 @@
 			(project "copernicus-main"
 				(path "/a9180fc8-dc83-4e73-a866-5c9cdd0f4d7b"
 					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 109.22 123.19 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "280bc8ac-d29a-4062-8484-9c22fa890023")
+		(property "Reference" "R6"
+			(at 106.934 121.666 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 106.426 125.222 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 109.22 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 109.22 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "c616526f-c67f-4494-b22b-1a32ce3eb250")
+		)
+		(pin "1"
+			(uuid "6626cc8c-9d36-4a9f-bf49-f43797615a98")
+		)
+		(instances
+			(project "copernicus-main"
+				(path "/a9180fc8-dc83-4e73-a866-5c9cdd0f4d7b"
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -9024,116 +9417,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Interface_UART:THVD1450D")
-		(at 143.51 134.62 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "609adfe4-0bbd-405e-b653-24716a9870cf")
-		(property "Reference" "U4"
-			(at 148.082 120.396 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "THVD1450D"
-			(at 145.034 149.098 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 143.51 165.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/thvd1450.pdf"
-			(at 143.51 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "3.3-V to 5-V RS-485 transceiver with ±18-kV IEC ESD protection, SOIC-8"
-			(at 143.51 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 143.51 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "4"
-			(uuid "b0a782a2-47a0-4c92-9fe0-251867dcd274")
-		)
-		(pin "5"
-			(uuid "23223eb7-c1b2-461b-9cff-32275ee9a37b")
-		)
-		(pin "1"
-			(uuid "75b78041-ae03-4bbf-b4ed-43dcc36fe41c")
-		)
-		(pin "3"
-			(uuid "94eef7ca-f34d-42c0-9b42-dca87a6160da")
-		)
-		(pin "7"
-			(uuid "c31bce5e-28fc-4372-826c-9cb59ebff3b0")
-		)
-		(pin "6"
-			(uuid "99e2fff6-b650-4bad-8629-81ef60275deb")
-		)
-		(pin "8"
-			(uuid "514cf70e-f398-4ed7-8744-137c10beb671")
-		)
-		(pin "2"
-			(uuid "1b3d6e7c-5ab4-4c1a-a8e9-ce9a9228b0df")
-		)
-		(instances
-			(project "copernicus-main"
-				(path "/a9180fc8-dc83-4e73-a866-5c9cdd0f4d7b"
-					(reference "U4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 273.05 152.4 0)
 		(unit 1)
@@ -9299,7 +9582,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 143.51 151.13 0)
+		(at 128.27 153.67 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9310,7 +9593,7 @@
 		(fields_autoplaced yes)
 		(uuid "74b447f7-c383-48c4-b8ab-0f258ada2799")
 		(property "Reference" "#PWR019"
-			(at 143.51 157.48 0)
+			(at 128.27 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9321,7 +9604,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 143.51 156.21 0)
+			(at 128.27 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9332,7 +9615,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 143.51 151.13 0)
+			(at 128.27 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9343,7 +9626,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 143.51 151.13 0)
+			(at 128.27 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9354,7 +9637,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 143.51 151.13 0)
+			(at 128.27 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9691,6 +9974,85 @@
 			(project "copernicus-main"
 				(path "/a9180fc8-dc83-4e73-a866-5c9cdd0f4d7b"
 					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 144.78 132.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "81134f3c-c38a-4b93-96cc-a6ba93bed01d")
+		(property "Reference" "#PWR022"
+			(at 144.78 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 144.78 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 144.78 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 144.78 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 144.78 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5e7b641f-8593-4e51-889a-a7e87c6bfc52")
+		)
+		(instances
+			(project "copernicus-main"
+				(path "/a9180fc8-dc83-4e73-a866-5c9cdd0f4d7b"
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -10386,6 +10748,85 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 114.3 127 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9d940263-ca92-4830-80bc-7db6536af7e4")
+		(property "Reference" "#PWR021"
+			(at 114.3 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 114.3 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 114.3 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 114.3 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "673b4bc3-c12e-4c0b-93a5-19a48b613162")
+		)
+		(instances
+			(project "copernicus-main"
+				(path "/a9180fc8-dc83-4e73-a866-5c9cdd0f4d7b"
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 142.24 44.45 0)
 		(unit 1)
 		(body_style 1)
@@ -10458,6 +10899,85 @@
 			(project "copernicus-main"
 				(path "/a9180fc8-dc83-4e73-a866-5c9cdd0f4d7b"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 116.84 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "adab13ba-a745-40b3-98ea-96c8d8f68f3f")
+		(property "Reference" "R7"
+			(at 114.554 145.796 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 113.792 149.352 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.84 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.84 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 116.84 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "a2f98331-4ec6-42c0-9671-3c17ad9cd2ac")
+		)
+		(pin "1"
+			(uuid "627d5899-4d23-4e0b-975a-fe93997304b5")
+		)
+		(instances
+			(project "copernicus-main"
+				(path "/a9180fc8-dc83-4e73-a866-5c9cdd0f4d7b"
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -11023,7 +11543,7 @@
 	)
 	(symbol
 		(lib_id "Interface_UART:THVD1400D")
-		(at 120.65 101.6 0)
+		(at 128.27 135.89 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11034,7 +11554,7 @@
 		(fields_autoplaced yes)
 		(uuid "cecf5468-7232-4531-bace-3943e0268453")
 		(property "Reference" "U5"
-			(at 122.7933 83.82 0)
+			(at 130.4133 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11045,7 +11565,7 @@
 			)
 		)
 		(property "Value" "THVD1400D"
-			(at 122.7933 86.36 0)
+			(at 130.4133 120.65 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11056,7 +11576,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 120.65 119.38 0)
+			(at 128.27 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11067,7 +11587,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/thvd1420.pdf"
-			(at 120.65 100.33 0)
+			(at 128.27 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11078,7 +11598,7 @@
 			)
 		)
 		(property "Description" "Half duplex RS-485/RS-422, 500 Kbps, 3V - 5.5V supply, ±12kV electro-static discharge (ESD) protection, with receiver/driver enable, 32 receiver drive capacity, SOIC-8"
-			(at 120.65 101.6 0)
+			(at 128.27 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11116,6 +11636,165 @@
 			(project "copernicus-main"
 				(path "/a9180fc8-dc83-4e73-a866-5c9cdd0f4d7b"
 					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 114.3 123.19 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d0cd5d3c-93b0-4929-b547-96c0d47a633b")
+		(property "Reference" "C14"
+			(at 116.078 121.666 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 115.57 124.968 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 114.3 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 114.3 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a36d454e-bb52-446b-a42f-66d8f3e06a03")
+		)
+		(pin "2"
+			(uuid "3e2e2b81-d922-4f0f-8ad1-cf2a6329e8bb")
+		)
+		(instances
+			(project "copernicus-main"
+				(path "/a9180fc8-dc83-4e73-a866-5c9cdd0f4d7b"
+					(reference "C14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 128.27 118.11 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d8e513cc-21e3-4a69-b885-c3a51445c617")
+		(property "Reference" "#PWR020"
+			(at 128.27 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 128.27 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 128.27 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 128.27 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 128.27 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3c36e393-c137-4bbb-9ef1-81f301be9eeb")
+		)
+		(instances
+			(project "copernicus-main"
+				(path "/a9180fc8-dc83-4e73-a866-5c9cdd0f4d7b"
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)

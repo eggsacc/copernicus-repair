@@ -8,6 +8,7 @@
 >- [SN65HVD485E datasheet](https://www.ti.com/lit/ds/symlink/sn65hvd485e.pdf?ts=1782191083756)
 >- [MAX485 datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/MAX1487-MAX491.pdf)
 >- [MAX3485 datasheet](https://www.analog.com/media/cn/technical-documentation/data-sheets/1079.pdf)
+>- [THVD1400 datasheet](https://www.ti.com/lit/ds/symlink/thvd1400.pdf?ts=1782266824050)
 >- [THVD1450 datasheet](https://www.ti.com/lit/ds/symlink/thvd1450.pdf)
 >- [SP3485 datasheet](https://docs.rs-online.com/1956/0900766b81141d5c.pdf)
 
