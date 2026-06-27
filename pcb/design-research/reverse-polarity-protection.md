@@ -7,6 +7,8 @@
 >- [TI reverse current protection circuits](https://www.ti.com/lit/an/slva139/slva139.pdf?ts=1782282569398&ref_url=https%253A%252F%252Fwww.google.com%252F)
 >- [NCV68261 datasheet](https://www.onsemi.com/download/data-sheet/pdf/ncv68261-d.pdf)
 >- [LM5060 datasheet](https://www.ti.com/lit/ds/symlink/lm5060-q1.pdf?ts=1782357004916&ref_url=https%253A%252F%252Fwww.google.com%252F)
+>- [NVEP6090 MOSFET datasheet](https://uploadcdn.oneyac.com/attachments/files/brand_pdf/ncepower/NCEP6090.pdf)
+>- [SMCJ33A TVS diode](https://www.st.com/resource/en/datasheet/smcj12a.pdf)
 
 ## Methods
 
@@ -32,4 +34,9 @@ A zener diode and resistor is usually placed to limit the gate current and volta
 
 ### 3) High side protection controller IC
 
+A dedicated IC could be used to control a high-side N-FET to conduct with ultra-low losses and turn off the MOSFET the moment the internal comparator monitoring the voltage differential is tripped.
 
+## NCV68261
+![alt text](assets/ncv68261-ap1.png)
+![alt text](assets/ncv68261-ap1.png)
+![alt text](assets/ncv68261-rpp.png)
