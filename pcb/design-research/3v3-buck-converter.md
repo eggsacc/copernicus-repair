@@ -3,6 +3,7 @@
 **References:**
 >- [How switching frequency affects performance](https://www.ti.com/lit/an/slvaed3a/slvaed3a.pdf?ts=1782647792501&ref_url=https%253A%252F%252Fwww.google.com%252F)
 >- [LMR51610 datasheet](https://www.ti.com/lit/ds/symlink/lmr51610.pdf?ts=1782609124824&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FLMR51610%252Fpart-details%252FLMR51610YFDBVR%253FkeyMatch%253DLMR51610Y%2526tisearch%253Duniversal_search)
+>- [Buck converter output limitations](https://www.ti.com/lit/an/slyt293/slyt293.pdf?ts=1782683380074)
 
 ## Efficient step down converter
 
@@ -26,6 +27,12 @@ A buck converter is the superior choice compared to linear voltage regulators wh
 ## LMR51610XDBVR application
 
 ![alt text](assets/buck-an.png)
+
+### Switching frequency
+
+The higher switching frequency allows for lower value inductors and smaller output capacitors, which results in smaller design size and lower component cost. However, higher switching frequency brings more switching loss, making the design less efficient and produce more heat. 
+
+400kHz was chosen to balance noise and switching efficiency. External component size is not a concern here.
 
 ### Inductor selection
 
@@ -52,13 +59,6 @@ The datasheet also suggest a low DCR (DC resistance) of $\le 150m\Omega$. The re
 - 1.5A RMS
 - 2.5A Saturation
 - $\le 150m\Omega$ DCR
-
-
-### Switching frequency
-
-The higher switching frequency allows for lower value inductors and smaller output capacitors, which results in smaller design size and lower component cost. However, higher switching frequency brings more switching loss, making the design less efficient and produce more heat. 
-
-400kHz was chosen to balance noise and switching efficiency. External component size is not a concern here.
 
 ## PCB layout guide
 
